@@ -27,6 +27,10 @@ html {
   scroll-behavior: smooth;
 }
 
+section {
+  padding: 2rem 9%;
+}
+
 .btn {
   display: inline-block;
   padding: 0.9rem 1.5rem;
@@ -83,12 +87,80 @@ html {
   display: none;
 }
 
+/* home section */
+.home {
+  min-height: 100vh;
+  padding-top: 12rem;
+  background: url(../img/home-bg.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.home .row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.home .row .content {
+  flex: 1 1 42rem;
+}
+
+.home .row .image {
+  flex: 1 1 42rem;
+  padding-top: 10rem;
+  text-align: center;
+}
+
+.home .row .image img {
+  height: 35rem;
+  animation: float 4s linear infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0rem);
+  }
+
+  50% {
+    transform: translateY(-7rem);
+  }
+}
+
+.home .row .content h3 {
+  font-size: 6.5rem;
+  color: var(--main-color);
+  text-transform: uppercase;
+}
+
+.home .image-slide {
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.home .image-slide img {
+  height: 9rem;
+  margin: 0 0.5rem;
+  cursor: pointer;
+  margin-top: 5rem;
+}
+
+.home .image-slide img:hover {
+  transform: translateY(-2rem);
+}
+
 /* media queries */
 @media (max-width: 991px) {
   html {
     font-size: 55%;
   }
   .header {
+    padding: 2rem;
+  }
+
+  section {
     padding: 2rem;
   }
 }
@@ -107,6 +179,11 @@ html {
     left: 0;
     right: 0;
     background: #fff;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  .header .navbar.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   }
 
   .header .navbar a {
@@ -114,12 +191,24 @@ html {
     font-size: 2.2rem;
     margin: 0;
     padding: 1.5rem 2rem;
-    clip-path: polygon(0 0, 100% 0, 0 0);
+  }
+
+  .home {
+    text-align: center;
+  }
+
+  .home .row .content h3 {
+    font-size: 4rem;
   }
 }
 
 @media (max-width: 450px) {
   html {
     font-size: 50%;
+  }
+
+  .home .row .image img {
+    height: auto;
+    width: 100%;
   }
 }
