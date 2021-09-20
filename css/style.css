@@ -377,6 +377,10 @@ section {
   border-radius: 0;
 }
 
+.swiper-pagination-bullet-active {
+  background: var(--main-color);
+}
+
 /* media queries */
 @media (max-width: 991px) {
   html {

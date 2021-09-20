@@ -19,7 +19,7 @@ document.querySelectorAll('.image-slide img').forEach(images => {
 })
 
 // plugin swiper
-var swiper = new Swiper('.review__slider', {
+let swiper = new Swiper('.review__slider', {
   spaceBetween: 20,
   pagination: {
     el: '.swiper-pagination',
