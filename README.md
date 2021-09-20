@@ -16,7 +16,7 @@
 - [x] HTML
 - [x] CSS
 - [x] Layout Responsivo
-- [ ] Usando um pouco de JavaScript para compor o menu
+- [x] Biblioteca Swiper para slides
 
 
 
