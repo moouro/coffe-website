@@ -4,7 +4,7 @@
 
 <p align="center">
   <img src="./img/preview1.gif" width="600" title="hover text">
-  <img src="./img/preview3.gif" width="600" alt="project image">
+  <img src="./img/responsive.gif" width="600" alt="project image">
 </p>
 
 # Teste online
